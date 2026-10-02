@@ -32,7 +32,7 @@ export async function callGemini(params: {
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-      model: "gemini-3.8-flash",
+      model: "gemini-3.5-flash",
       systemInstruction: params.systemPrompt,
       generationConfig: params.jsonMode
         ? { responseMimeType: "application/json" }
